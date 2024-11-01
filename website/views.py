@@ -6,10 +6,10 @@ from .models import Note
 from . import db
 import json
 
-views = Blueprint ('views', __name__) #don't need to name it 'views', but easier to
+views = Blueprint ('views', __name__) 
 
 #to define a view/root
-@views.route('/', methods=['GET', 'POST'])#define the url, whenerver we pyut a / in our url, it will go home
+@views.route('/', methods=['GET', 'POST'])#define the url, whenerver we put a / in our url, it will go home
 @login_required #add a login required decorator to home page, cannot get to home page unless u log in
 def home():
     if request.method =='POST':
