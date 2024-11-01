@@ -7,6 +7,5 @@ app = create_app()
 
 #we want it to run the webserve only if we run this file true
 if __name__ == '__main__': #running web server
-    app.run(debug=True) #run our flask app, debug=true when we make changes to our pythin code it is going to automatically rerun websercer
-#in production we would not set debug=true because it would reset the web server everytime
+    app.run(debug=True) #run our flask app, debug=true when we make changes to our pythin code it is going to automatically run again
 
