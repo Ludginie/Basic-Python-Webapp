@@ -8,7 +8,7 @@ from werkzeug.security import generate_password_hash, check_password_hash #way t
 from . import db #import db from init
 from flask_login import login_user, login_required, logout_user, current_user
 
-auth = Blueprint ('auth', __name__) #don't need to name it 'auth', but easier to
+auth = Blueprint ('auth', __name__)
 
 @auth.route('/login', methods=['GET', 'POST']) #able to accept get and post request
 def login():
