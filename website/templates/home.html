@@ -1,0 +1,21 @@
+ <!--exact same as base.html, but i can override blocks-->
+{% extends "base.html" %} {% block title %} Home {% endblock%} {% block content%}
+<h1 align="center"> Notes </h1>
+<ul class="list-group list-group-flush" id="notes">
+    {% for note in user.notes %}
+    <li class="list-group-item">
+        {{note.data}}
+        <button type="button" class="close" onClick="deleteNote('{{ note.id }}')"> <!--using javascrip function called deleteNote in onclick, sending a request to backend to delete thenote-->
+            <span area-hidden="true">&times;</span> <!--fancy X button lol-->
+            </button>
+    </li> <!--text associated with the notes-->
+    {% endfor %}
+</ul>
+<form method="POST">
+    <textarea name="note" id="note" class="form-control"></textarea>
+    <div align="center">
+        <br />
+        <button type="submit" class="btn btn-primary ">Add Note</button>
+    </div>
+</form>
+{%endblock%}
