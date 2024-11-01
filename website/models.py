@@ -1,5 +1,5 @@
 #where we create our databse models
-from . import db #importing from the CURRENT package(website folfer) the db object
+from . import db #importing from the CURRENT package(website folder) the db object
 from flask_login import UserMixin
 from sqlalchemy.sql import func  #gets current date and time
 #class for note
